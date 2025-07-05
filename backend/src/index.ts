@@ -39,7 +39,7 @@ if (cluster.isPrimary) {
 
   app.use(
     cors({
-      origin: ["http://localhost:5173"],
+      origin: ["http://localhost:5173", "https://doc-panel-1.onrender.com"],
       credentials: true,
     })
   );
