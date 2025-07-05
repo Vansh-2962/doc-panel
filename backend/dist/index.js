@@ -50,11 +50,10 @@ else {
     });
     const PORT = 8000;
     const app = (0, express_1.default)();
-    dotenv_1.default.config();
     app.use((0, cors_1.default)({
         origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
     }));
-    app.options("*", (0, cors_1.default)({
+    app.options("/*", (0, cors_1.default)({
         origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
         credentials: true,
     }));
