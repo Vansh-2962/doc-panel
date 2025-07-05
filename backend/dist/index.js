@@ -53,10 +53,6 @@ else {
     app.use((0, cors_1.default)({
         origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
     }));
-    app.options("/*", (0, cors_1.default)({
-        origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
-        credentials: true,
-    }));
     app.use(express_1.default.json());
     app.use(apiLimiter);
     app.post("/api/generate", (req, res) => __awaiter(void 0, void 0, void 0, function* () {

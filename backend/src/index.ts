@@ -42,14 +42,6 @@ if (cluster.isPrimary) {
     })
   );
 
-  app.options(
-    "/*",
-    cors({
-      origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
-      credentials: true,
-    })
-  );
-
   app.use(express.json());
   app.use(apiLimiter);
 
