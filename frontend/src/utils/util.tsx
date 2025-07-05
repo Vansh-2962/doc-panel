@@ -1,3 +1,4 @@
+// https://doc-panel.onrender.com
 interface IData {
   complaint: string;
   side?: string;
@@ -15,7 +16,7 @@ export async function getStreamData({
   duration,
   language = "english",
 }: IData) {
-  const response = await fetch("http://localhost:8000/api/generate", {
+  const response = await fetch("https://doc-panel.onrender.com/api/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
