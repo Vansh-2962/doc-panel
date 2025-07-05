@@ -16,7 +16,7 @@ export async function getStreamData({
   duration,
   language = "english",
 }: IData) {
-  const response = await fetch(`https://doc-panel.onrender.com/api/generate`, {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/generate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
