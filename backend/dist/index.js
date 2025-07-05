@@ -52,7 +52,10 @@ else {
     const app = (0, express_1.default)();
     dotenv_1.default.config();
     app.use((0, cors_1.default)({
-        origin: ["http://localhost:5173"],
+        origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
+    }));
+    app.options("*", (0, cors_1.default)({
+        origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
         credentials: true,
     }));
     app.use(express_1.default.json());
@@ -68,7 +71,6 @@ else {
         res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
         res.setHeader("Transfer-Encoding", "chunked");
         res.setHeader("Cache-Control", "no-cache");
-        res.setHeader("Access-Control-Allow-Origin", "*");
         try {
             const stream = yield groq.chat.completions.create({
                 messages: [
