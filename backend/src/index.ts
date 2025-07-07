@@ -38,7 +38,7 @@ if (cluster.isPrimary) {
 
   app.use(
     cors({
-      origin: ["https://doc-panel-1.onrender.com", "http://localhost:5173"],
+      origin: ["https://ai.zivaanhmis.com/","https://doc-panel-1.onrender.com", "http://localhost:5173"],
     })
   );
 
